@@ -1,0 +1,37 @@
+import React from 'react';
+import amazon from '../../assets/images/amazon.png';
+import shopify from '../../assets/images/shopify.png';
+
+const ServiceMainHero = () => {
+    return (
+        <section className="relative pt-40 pb-28 overflow-hidden bg-gradient-to-b from-[#CDD9FE] via-white to-[#D4B3FF21]">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 className="text-5xl md:text-6xl font-bricolage font-extrabold mb-6 leading-tight text-gray-900">
+                    Our Services
+                </h1>
+                <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We create, launch, and manage fully optimized ecommerce businesses for you—from product research to scaling—using a proven, data-driven system built for long-term growth and profitability.
+                </p>
+            </div>
+
+            <div className="mt-16 relative flex justify-center items-end">
+                <div className="absolute hidden lg:block left-8 md:left-16 lg:left-24 bottom-1/3 animate-float-delayed">
+                    <img
+                        src={amazon}
+                        alt="Amazon"
+                        className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl opacity-80"
+                    />
+                </div>
+            </div>
+            <div className="absolute hidden lg:block right-8 md:right-16 lg:right-24 top-1/4 animate-float">
+                <img
+                    src={shopify}
+                    alt="Shopify"
+                    className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl opacity-80"
+                />
+            </div>
+        </section>
+    );
+};
+
+export default ServiceMainHero;
