@@ -20,7 +20,7 @@ const MegaMenuServices = () => {
 
         {/* Column 1: Amazon */}
         <div>
-          <h3 className="text-lg font-bold mb-5 text-[#6C5CE7]">Amazon</h3>
+          <h3 className="text-lg font-bold mb-5 text-[#8B5CF6]">Amazon</h3>
           <ul className="space-y-3">
             {[
               "Amazon Store Creation",
@@ -31,7 +31,7 @@ const MegaMenuServices = () => {
             ].map((item, idx) => (
               <li key={idx}>
                 <Link to={`/services/${getSlug(item)}`}
-                  className="text-sm text-gray-600 hover:text-[#6C5CE7] transition-colors duration-200 block">
+                  className="text-sm text-gray-800 hover:text-[#8B5CF6] transition-all duration-200 block hover:translate-x-1">
                   {item}
                 </Link>
               </li>
@@ -41,18 +41,18 @@ const MegaMenuServices = () => {
 
         {/* Column 2: Walmart */}
         <div>
-          <h3 className="text-lg font-bold mb-5 text-[#6C5CE7]">Walmart</h3>
+          <h3 className="text-lg font-bold mb-5 text-[#8B5CF6]">Walmart</h3>
           <ul className="space-y-3">
             {[
-              "Wallmart Store Creation",
+              "Walmart Store Creation",
               "Walmart Dropshipping",
-              "Wallmart Private Labelled",
-              "Walmart product Hunting",
+              "Walmart Private Labelled",
+              "Walmart Product Hunting",
               "Walmart WFS",
             ].map((item, idx) => (
               <li key={idx}>
                 <Link to={`/services/${getSlug(item)}`}
-                  className="text-sm text-gray-600 hover:text-[#6C5CE7] transition-colors duration-200 block">
+                  className="text-sm text-gray-800 hover:text-[#8B5CF6] transition-all duration-200 block hover:translate-x-1">
                   {item}
                 </Link>
               </li>
@@ -62,18 +62,18 @@ const MegaMenuServices = () => {
 
         {/* Column 3: Shopify */}
         <div>
-          <h3 className="text-lg font-bold mb-5 text-[#6C5CE7]">Shopify</h3>
+          <h3 className="text-lg font-bold mb-5 text-[#8B5CF6]">Shopify</h3>
           <ul className="space-y-3">
             {[
               "Shopify Store Creation",
               "Shopify Automation",
               "Shopify Store Optimization",
-              "Shopify product Hunting",
+              "Shopify Product Hunting",
               "Shopify Store Marketing",
             ].map((item, idx) => (
               <li key={idx}>
                 <Link to={`/services/${getSlug(item)}`}
-                  className="text-sm text-gray-600 hover:text-[#6C5CE7] transition-colors duration-200 block">
+                  className="text-sm text-gray-800 hover:text-[#8B5CF6] transition-all duration-200 block hover:translate-x-1">
                   {item}
                 </Link>
               </li>
@@ -84,7 +84,7 @@ const MegaMenuServices = () => {
         {/* Column 4: Youtube + Tiktok */}
         <div className="space-y-8">
           <div>
-            <h3 className="text-lg font-bold mb-5 text-[#6C5CE7]">Youtube</h3>
+            <h3 className="text-lg font-bold mb-5 text-[#8B5CF6]">Youtube</h3>
             <ul className="space-y-3">
               {[
                 "Youtube Automation",
@@ -94,7 +94,7 @@ const MegaMenuServices = () => {
               ].map((item, idx) => (
                 <li key={idx}>
                   <Link to={`/services/${getSlug(item)}`}
-                    className="text-sm text-gray-600 hover:text-[#6C5CE7] transition-colors duration-200 block">
+                    className="text-sm text-gray-800 hover:text-[#8B5CF6] transition-all duration-200 block hover:translate-x-1">
                     {item}
                   </Link>
                 </li>
@@ -102,12 +102,12 @@ const MegaMenuServices = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-5 text-[#6C5CE7]">Tiktok</h3>
+            <h3 className="text-lg font-bold mb-5 text-[#8B5CF6]">Tiktok</h3>
             <ul className="space-y-3">
               {["Tiktok Shop Automation"].map((item, idx) => (
                 <li key={idx}>
                   <Link to={`/services/${getSlug(item)}`}
-                    className="text-sm text-gray-600 hover:text-[#6C5CE7] transition-colors duration-200 block">
+                    className="text-sm text-gray-800 hover:text-[#8B5CF6] transition-all duration-200 block hover:translate-x-1">
                     {item}
                   </Link>
                 </li>
@@ -118,10 +118,10 @@ const MegaMenuServices = () => {
 
         {/* Column 5: Others */}
         <div>
-          <h3 className="text-lg font-bold mb-5 text-[#6C5CE7]">Others</h3>
+          <h3 className="text-lg font-bold mb-5 text-[#8B5CF6]">Others</h3>
           <ul className="space-y-3">
             {[
-              "Virtual Assitant",
+              "Virtual Assistant",
               "Account Management",
               "Ecommerce Store Creation",
               "Ecommerce Store Marketing",
@@ -129,7 +129,7 @@ const MegaMenuServices = () => {
             ].map((item, idx) => (
               <li key={idx}>
                 <Link to={`/services/${getSlug(item)}`}
-                  className="text-sm text-gray-600 hover:text-[#6C5CE7] transition-colors duration-200 block">
+                  className="text-sm text-gray-800 hover:text-[#8B5CF6] transition-all duration-200 block hover:translate-x-1">
                   {item}
                 </Link>
               </li>
