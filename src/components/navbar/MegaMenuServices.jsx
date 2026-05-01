@@ -8,8 +8,8 @@ const MegaMenuServices = () => {
     <div
       className="mega-glass absolute top-[100%] left-1/2 -translate-x-1/2 
         w-[90vw] max-w-[1100px] rounded-3xl
-        opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-        transition-all duration-300 ease-in-out translate-y-3 group-hover:translate-y-0 
+        opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto 
+        transition-all duration-500 ease-out translate-y-4 group-hover:translate-y-0 
         z-[9999] mt-2 overflow-hidden border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
     >
 

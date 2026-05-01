@@ -3,7 +3,7 @@ import { packages } from '../../data/packages';
 
 const MegaMenuPackages = () => {
   return (
-    <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-[750px] bg-white/30 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+    <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-[750px] bg-white/30 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-500 ease-out transform translate-y-4 group-hover:translate-y-0 overflow-hidden">
       <div className="p-6 grid grid-cols-3 gap-6">
         {packages.map((pkg, i) => (
           <div key={i} className={`p-6 rounded-2xl shadow-lg border ${pkg.popular ? 'border-[#6C5CE7] bg-purple-50/30 relative shadow-md' : 'border-white/20 bg-white/20 hover:bg-white/40'} transition-all`}>
