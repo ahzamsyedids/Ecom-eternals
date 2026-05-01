@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MegaMenuServices from '../navbar/MegaMenuServices';
-// import MegaMenuPackages from '../navbar/MegaMenuPackages';
 import ConsultationModal from '../modals/ConsultationModal';
 import QuoteModal from '../modals/QuoteModal';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
@@ -61,10 +60,12 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className={`fixed w-full z-[999] transition-all duration-500 ${scrolled ? 'py-2' : 'py-6'}`}
+        // overflow-visible yahan zaroori hai
+        className={`fixed w-full z-[999] transition-all duration-500 overflow-visible ${scrolled ? 'py-2' : 'py-6'}`}
       >
-        <div className={`max-w-7xl mx-auto px-4 sm:px-8 transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-lg rounded-full border border-white/20' : ''}`}>
-          <div className="flex justify-between items-center h-20">
+        <div className={`max-w-7xl mx-auto px-4 sm:px-8 transition-all duration-500 overflow-visible ${scrolled ? 'bg-white/90 shadow-lg rounded-full border border-white/20' : ''}`}>
+          {/* min-h-20 aur py-2 se button ko upar jane ki jagah mil gayi */}
+          <div className="flex justify-between items-center min-h-20 py-2 overflow-visible">
 
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center cursor-pointer pl-2">
@@ -79,23 +80,21 @@ const Navbar = () => {
               <Link to="/about" className="px-4 py-2 text-gray-600 hover:text-[#6C5CE7] font-medium transition-colors text-sm whitespace-nowrap">About Us</Link>
 
               <div className="relative group pb-8 -mb-8">
-                <button className="flex items-center text-gray-600 group-hover:text-[#6C5CE7] font-medium transition-colors  py-2 text-sm whitespace-nowrap">
-                  <Link to='/services' className="flex items-center text-gray-600 group-hover:text-[#6C5CE7] font-medium transition-colors px-4 py-2 text-sm whitespace-nowrap">Services <ChevronDownIcon /></Link>
+                <button className="flex items-center text-gray-600 group-hover:text-[#6C5CE7] font-medium transition-colors py-2 text-sm whitespace-nowrap">
+                  <div className="flex items-center text-gray-600 group-hover:text-[#6C5CE7] font-medium transition-colors px-4 py-2 text-sm whitespace-nowrap">Services <ChevronDownIcon /></div>
                 </button>
                 <MegaMenuServices />
               </div>
 
-
               <Link to='/packages' className="flex items-center text-gray-600 group-hover:text-[#6C5CE7] font-medium transition-colors px-4 py-2 text-sm whitespace-nowrap">Packages</Link>
-
               <Link to="/contact" className="px-4 py-2 text-gray-600 hover:text-[#6C5CE7] font-medium transition-colors text-sm whitespace-nowrap">Contact Us</Link>
             </div>
 
-            {/* CTA Button (desktop) */}
-            <div className="hidden lg:flex pr-2">
+            {/* CTA Button (desktop) - Fixed Wrapper */}
+            <div className="hidden lg:flex pr-2 py-1 relative z-[1001] overflow-visible">
               <button
                 onClick={() => setModalOpen(true)}
-                className="text-white py-3 px-6 rounded-xl transition-all duration-200 hover:-translate-y-0.5 bg-[linear-gradient(to_right,#8B5CF6,#0066CC)] shadow-[0_4px_20px_rgba(99,102,241,0.4)] font-syne text-sm whitespace-nowrap"
+                className="text-white py-3 px-6 rounded-xl transition-all duration-300 hover:-translate-y-0.5 active:scale-95 bg-[linear-gradient(to_right,#8B5CF6,#0066CC)] shadow-[0_4px_20px_rgba(99,102,241,0.4)] font-syne text-sm whitespace-nowrap"
               >
                 Book a Free Strategy Call
               </button>
@@ -132,11 +131,10 @@ const Navbar = () => {
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                   className="w-full flex items-center justify-between px-4 py-3 text-base font-semibold text-gray-700 hover:text-[#6C5CE7] hover:bg-white/40 rounded-xl transition-all"
                 >
-                  <Link to='/services'>Services</ Link>
+                  <span className="font-semibold">Services</span>
                   <ChevronDownIcon open={mobileServicesOpen} />
                 </button>
 
-                {/* Accordion content */}
                 <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                   <div className="px-4 pb-3 grid grid-cols-2 gap-6 pt-3">
                     {mobileServices.map((cat, i) => (
@@ -160,13 +158,14 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
+
               <Link to="/packages" className="block px-4 py-3 text-base font-semibold text-gray-700 hover:text-[#6C5CE7] hover:bg-white/40 rounded-xl transition-all" onClick={() => setMobileMenuOpen(false)}>Packages</Link>
               <Link to="/contact" className="block px-4 py-3 text-base font-semibold text-gray-700 hover:text-[#6C5CE7] hover:bg-white/40 rounded-xl transition-all" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
 
               <div className="pt-4">
                 <button
                   onClick={() => { setModalOpen(true); setMobileMenuOpen(false); }}
-                  className="w-full text-white py-4 font-semibold shadow-lg rounded-xl transition-all duration-200 hover:-translate-y-0.5 bg-[linear-gradient(to_right,#8B5CF6,#0066CC)] shadow-[0_4px_20px_rgba(99,102,241,0.4)] font-syne"
+                  className="w-full text-white py-4 font-semibold shadow-lg rounded-xl transition-all duration-300 hover:-translate-y-1 bg-[linear-gradient(to_right,#8B5CF6,#0066CC)] shadow-[0_4px_20px_rgba(99,102,241,0.4)] font-syne"
                 >
                   Book a Free Call
                 </button>

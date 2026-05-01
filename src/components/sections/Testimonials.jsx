@@ -71,7 +71,7 @@ const Testimonials = () => {
                 spaceBetween: 50,
               },
             }}
-            className="testimonial-swiper !pb-20"
+            className="testimonial-swiper !pb-20 xl:px-16 2xl:px-0"
           >
             {testimonials.map((t, i) => (
               <SwiperSlide key={i} className="py-10">
@@ -109,15 +109,19 @@ const Testimonials = () => {
             ))}
           </Swiper>
 
-          {/* Navigation Arrows - Desktop Only */}
-          <div className="hidden xl:block absolute top-[45%] -translate-y-1/2 -left-20 z-20">
-            <button className="swiper-prev w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:text-[#6C5CE7] hover:border-[#6C5CE7] shadow-xl transition-all duration-300">
+          {/* Navigation Arrows - Responsively Positioned */}
+          {/* Left Arrow */}
+          <div className="hidden xl:block absolute top-[45%] -translate-y-1/2 z-20 
+            xl:left-2 2xl:-left-20">
+            <button className="swiper-prev w-12 h-12 rounded-full border border-gray-200 bg-white/90 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-[#6C5CE7] hover:border-[#6C5CE7] shadow-xl transition-all duration-300">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
             </button>
           </div>
 
-          <div className="hidden xl:block absolute top-[45%] -translate-y-1/2 -right-20 z-20">
-            <button className="swiper-next w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:text-[#6C5CE7] hover:border-[#6C5CE7] shadow-xl transition-all duration-300">
+          {/* Right Arrow */}
+          <div className="hidden xl:block absolute top-[45%] -translate-y-1/2 z-20 
+            xl:right-2 2xl:-right-20">
+            <button className="swiper-next w-12 h-12 rounded-full border border-gray-200 bg-white/90 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-[#6C5CE7] hover:border-[#6C5CE7] shadow-xl transition-all duration-300">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
             </button>
           </div>
@@ -140,13 +144,14 @@ const Testimonials = () => {
           width: 24px;
           border-radius: 5px;
         }
+        /* Ensure arrows don't cause layout shift and stay on top */
+        .swiper-prev, .swiper-next {
+          cursor: pointer;
+          pointer-events: auto;
+        }
       ` }} />
     </div>
   );
 };
 
 export default Testimonials;
-
-
-
-
